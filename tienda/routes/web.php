@@ -16,9 +16,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+    
 });
 
 Auth::routes();
+Route::get('/products', function () {
+    return view('layouts.prod');
+});
+Route::get('/products', [App\Http\Controllers\PortafolioController::class, 'index']);
 Route::resource('clientes', App\Http\Controllers\ClienteController::class);
 Route::resource('ventas', App\Http\Controllers\VentaController::class);
 Route::resource('productos', App\Http\Controllers\ProductoController::class);
