@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Venta;
+use App\Models\Producto;
+use App\Models\Cliente;
 use Illuminate\Http\Request;
 
 /**
@@ -29,10 +31,16 @@ class VentaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function create()
     {
         $venta = new Venta();
-        return view('venta.create', compact('venta'));
+        $productos= producto::pluck('id');
+        $clientes= cliente::pluck('id');
+        return view('venta.create', compact('venta','productos','clientes'));
     }
 
     /**
