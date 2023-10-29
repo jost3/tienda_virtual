@@ -28,24 +28,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{{ url('/products') }}">Products</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">Store</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        @foreach ($productos as $producto)
-                                        <tr>
-                                            
-											<td>{{ $producto->nombre }}</td>
-											<td>{{ $producto->precio }}</td>
-											<td>{{ $producto->categoria }}</td>
-											<td>{{ $producto->existencias }}</td>
-											<td>{{ $producto->proveedor }}</td>
-											<td>{{ $producto->descripcion }}</td>
-                                        </tr>
-                                    @endforeach
         <section class="page-section">
             <div class="container">
                 <div class="product-item">

@@ -42,6 +42,11 @@
                                     <a class="nav-link" href="{{ route('ventas.index') }}">{{ __('venta') }}</a>
                     </li>
                     @endrole
+                    @role('cliente')
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{ url('/products') }}">Productos</a>
+                    </li>
+                    @endrole
                     </ul>
 
                     <!-- Right Side Of Navbar -->
