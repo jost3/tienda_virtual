@@ -5,7 +5,7 @@
 @section('template_title')
     Producto
 @endsection
-
+@role('admin')
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -81,3 +81,4 @@
         </div>
     </div>
 @endsection
+@endrole
