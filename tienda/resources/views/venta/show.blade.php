@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@extends('layouts.plantilla')
 @section('template_title')
     {{ $venta->name ?? "{{ __('Show') Venta" }}
 @endsection
